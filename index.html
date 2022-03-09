@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Keeper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" ></script>
+</head>
+<body>
+    <div class="sticky-top bg-white">
+        <h1 class="text-center">HEADER</h1>
+        <div class="text-center">
+            <label for="input1">Input 1</label>
+            <input class="m-3" type="text" id="input1" placeholder="Enter Details">
+
+            <label for="input2">Input 2</label>
+            <input class="m-3" type="text" id="input2" placeholder="Enter Details">
+
+            <label for="input3">Input 3</label>
+            <input class="m-3" type="text" id="input3" placeholder="Enter Details">
+            
+            <button class="btn btn-primary" onclick="submit();">Add to List</button>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Detail 1</th>
+            <th scope="col">Detail 2</th>
+            <th scope="col">Detail 3</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="master_list">
+        </tbody>
+      </table>
+
+      <script> 
+        let item_array = [];
+        let id = 0;
+        let del_but = ""
+        
+        function submit() {
+            let ipt1 = $("#input1").val();  //Gets the value in input box 1
+            console.log(ipt1);
+            let ipt2 = $("#input2").val();
+            let ipt3 = $("#input3").val();
+            let new_item = {id, ipt1, ipt2, ipt3}   //Creates an object storing the inputted data
+            console.log(new_item);
+            console.log(new_item.ipt1);
+            del_but = "<button class='btn btn-danger' id="+ id + " onclick='deleteItem(" + id + ");'>Delete</button>"   //Ties the button to the same ID as the input data
+            console.log(del_but);
+            id += 1;    //Generates new ID
+            item_array.push(new_item);
+            console.log(item_array);
+            refresh();  //Redisplays the table after a new item is added
+        }
+        
+        function deleteItem(item_id) {
+            let without = item_array.filter(function(item) {return item.id!==item_id}); //Returns an array of all items whose IDs DO NOT match the ID of the item to be deleted
+            item_array = without;
+            refresh();
+        }
+
+        function refresh() {
+            let result = "";
+            for (let i=0; i<item_array.length; i++) {
+                del_but = "<button class='btn btn-danger' id="+ item_array[i].id + " onclick='deleteItem(" + item_array[i].id + ");'>Delete</button>"   //Makes sure the button IDs still match their corresponding data
+                result += "<tr><td>" + item_array[i].ipt1 + "</td>\n<td>" + item_array[i].ipt2 + "</td>\n<td>" + item_array[i].ipt3 + "</td>\n<td>" + del_but + "</td></tr>"    //Changes the innerHTML of the table to contain the updated row data
+                console.log("loop "+i)
+            }
+            $("#master_list").html(result);
+        }
+      </script>
+</body>
+</html>
