@@ -147,9 +147,92 @@
                 }
             }
             if (col===2) {
-                
+                let sort_by = $("#col2").val();
+                console.log(sort_by);
+                if (sort_by==="new-old") {
+                    sort_list.sort((a,b) => {
+                        return a.id - b.id;
+                    });
+                    console.log("chronological");
+                }
+                else if (sort_by==="old-new") {
+                    sort_list.sort((a,b) => {
+                        return b.id - a.id;
+                    });
+                    console.log("reverse chronological");
+                }
+                else if (sort_by==="a-z") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt2.toLowerCase();
+                        let lower_b = b.ipt2.toLowerCase();
+                        if (lower_a<lower_b) {
+                            return -1;
+                        }
+                        if (lower_a>lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("alphabetical");
+                }
+                else if (sort_by==="z-a") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt2.toLowerCase();
+                        let lower_b = b.ipt2.toLowerCase();
+                        if (lower_a>lower_b) {
+                            return -1;
+                        }
+                        if (lower_a<lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("reverse alphabetical");
+                }
             }
             if (col===3) {
+                let sort_by = $("#col3").val();
+                console.log(sort_by);
+                if (sort_by==="new-old") {
+                    sort_list.sort((a,b) => {
+                        return a.id - b.id;
+                    });
+                    console.log("chronological");
+                }
+                else if (sort_by==="old-new") {
+                    sort_list.sort((a,b) => {
+                        return b.id - a.id;
+                    });
+                    console.log("reverse chronological");
+                }
+                else if (sort_by==="a-z") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt3.toLowerCase();
+                        let lower_b = b.ipt3.toLowerCase();
+                        if (lower_a<lower_b) {
+                            return -1;
+                        }
+                        if (lower_a>lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("alphabetical");
+                }
+                else if (sort_by==="z-a") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt3.toLowerCase();
+                        let lower_b = b.ipt3.toLowerCase();
+                        if (lower_a>lower_b) {
+                            return -1;
+                        }
+                        if (lower_a<lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("reverse alphabetical");
+                }
             }
             refresh();
         }
