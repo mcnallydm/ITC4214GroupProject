@@ -23,12 +23,36 @@
             <button class="btn btn-primary" onclick="submit();">Add to List</button>
         </div>
     </div>
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
         <thead>
           <tr>
-            <th scope="col">Detail 1</th>
-            <th scope="col">Detail 2</th>
-            <th scope="col">Detail 3</th>
+            <th scope="col">Detail 1
+                <select id="col1">
+                    <option value="new-old">New-Old</option>
+                    <option value="old-new">Old-New</option>
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                </select>
+                <button class="btn btn-secondary" onclick="sort(1);">Sort</button>
+            </th>
+            <th scope="col">Detail 2
+                <select id="col2">
+                    <option value="new-old">New-Old</option>
+                    <option value="old-new">Old-New</option>
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                </select>
+                <button class="btn btn-secondary" onclick="sort(2);">Sort</button>
+            </th>
+            <th scope="col">Detail 3
+                <select id="col3">
+                    <option value="new-old">New-Old</option>
+                    <option value="old-new">Old-New</option>
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                </select>
+                <button class="btn btn-secondary" onclick="sort(3);">Sort</button>
+            </th>
             <th scope="col">Delete</th>
           </tr>
         </thead>
@@ -46,7 +70,7 @@
             console.log(ipt1);
             let ipt2 = $("#input2").val();
             let ipt3 = $("#input3").val();
-            let new_item = {id, ipt1, ipt2, ipt3}   //Creates an object storing the inputted data
+            let new_item = {id, ipt1, ipt2, ipt3};   //Creates an object storing the inputted data
             console.log(new_item);
             console.log(new_item.ipt1);
             del_but = "<button class='btn btn-danger' id="+ id + " onclick='deleteItem(" + id + ");'>Delete</button>"   //Ties the button to the same ID as the input data
@@ -71,6 +95,63 @@
                 console.log("loop "+i)
             }
             $("#master_list").html(result);
+        }
+
+        function sort(num) {
+            console.log("sorting");
+            let col = Number(num);
+            let sort_list = item_array;
+            console.log(col);
+            if (col===1) {
+                let sort_by = $("#col1").val();
+                console.log(sort_by);
+                if (sort_by==="new-old") {
+                    sort_list.sort((a,b) => {
+                        return a.id - b.id;
+                    });
+                    console.log("chronological");
+                }
+                else if (sort_by==="old-new") {
+                    sort_list.sort((a,b) => {
+                        return b.id - a.id;
+                    });
+                    console.log("reverse chronological");
+                }
+                else if (sort_by==="a-z") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt1.toLowerCase();
+                        let lower_b = b.ipt1.toLowerCase();
+                        if (lower_a<lower_b) {
+                            return -1;
+                        }
+                        if (lower_a>lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("alphabetical");
+                }
+                else if (sort_by==="z-a") {
+                    sort_list.sort((a,b) => {
+                        let lower_a = a.ipt1.toLowerCase();
+                        let lower_b = b.ipt1.toLowerCase();
+                        if (lower_a>lower_b) {
+                            return -1;
+                        }
+                        if (lower_a<lower_b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    console.log("reverse alphabetical");
+                }
+            }
+            if (col===2) {
+                
+            }
+            if (col===3) {
+            }
+            refresh();
         }
       </script>
 </body>
