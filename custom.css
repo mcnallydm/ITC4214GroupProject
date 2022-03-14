@@ -1,0 +1,21 @@
+body {
+    background-color: whitesmoke;
+}
+
+.btn {
+    background-color: #E5B36F;
+    color: black;
+}
+
+.sticky-top {
+    background-color:  #e35d46;
+}
+
+h1 {
+    color: white;
+}
+
+.row {
+    max-width: 95%;
+    margin: auto;
+}
