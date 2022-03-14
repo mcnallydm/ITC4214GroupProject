@@ -107,6 +107,10 @@
             id += 1;    //Generates new ID
             item_array.push(new_item);
             console.log(item_array);
+            $("#input1").val("");
+            $("#input2").val("");
+            $("#input3").val("");
+            console.log($("#input1").val());
             refresh();  //Redisplays the table after a new item is added
         }
         
