@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Carousel for About Page</title>
+</head>
+
+<body>
+<!-- Carousel area begins -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators for which slide user is on -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Slide images and text -->
+  <div class="carousel-inner">
+  <!-- To have the carousel active -->
+    <div class="item active">
+    <!-- Images that need formatting -->
+    <!-- There's an empty space on the right for all of them -->
+    <!-- I can't get rid of that space -->
+      <img src="image1.png">
+      <!-- This adds a caption to the slide -->
+      <div class="carousel-caption">
+      <h1> Nice mountain </h1>
+      <p> I like it here </p>
+      </div>
+      <!-- End of caption for slide -->
+    </div>
+
+    <div class="item">
+      <img src="image2.png">
+      <!-- Adding slide caption -->
+      <div class="carousel-caption">
+      <h1> I'm hungry </h1>
+      <p> I'll make a sandwich </p>
+      </div>
+      <!-- Ending slide caption -->
+    </div>
+
+    <div class="item">
+      <img src="image3.png">
+      <!-- Adding caption to slide -->
+      <div class="carousel-caption">
+      <h1> No longer hungry </h1>
+      <p> I ate a sandwich </p>
+      </div>
+      <!-- End of caption to slide -->
+    </div>
+    <!-- End of images that need formatting -->
+  </div>
+
+  <!-- Left and right controls to change slide -->
+  <a class="left carousel-control" href="#carousel" data-slide="prev">
+  <!-- glyphicon is to show the arrow to the user -->
+  <!-- glyphicon-chevron-x is for direction of arrow -->
+  <!-- I don't remember what <span></span> is -->
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only"> Previous </span>
+  </a>
+  <a class="right carousel-control" href="#carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only"> Next </span>
+  </a>
+  <!-- End of controls to change slides -->
+</div>
+<!-- Carousel area Ends -->
+
+<hr>
+    <!-- Grid cards area starts here -->
+
+<!--
+  <section class="cards">
+
+      <a href="#" class="card">
+        <div class="card__overlay">
+          <span>Read More</span>
+        </div>
+        <div class="card__image" style="background-image:url('alex.png')"></div>
+        <div class="card__content">
+          <div class="card__title"> This is a test title </div>
+          <div class="card__description"> Place holder text </div>
+        </div>
+      </a>
+  </section>
+  -->
+
+</body>
+
+</html>
