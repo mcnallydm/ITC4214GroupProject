@@ -12,112 +12,153 @@
 </head>
 
 <body>
-<!-- Carousel area begins -->
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators for which slide user is on -->
-      <ol class="carousel-indicators">
+
+  <div id="carousel" class="carousel slide" data-ride="carousel"> <!-- Carousel area begins -->
+      
+      <ol class="carousel-indicators"> <!-- Indicators for which slide user is on -->
+
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
         <li data-target="#carousel" data-slide-to="2"></li>
+
       </ol>
 
-  <!-- Slide images and text -->
-  <div class="carousel-inner">
-  <!-- To have the carousel active -->
-    <div class="item active">
+  <div class="carousel-inner"> <!-- Carousel slide images and text -->
+  
+    <div class="item active"> <!-- To have the carousel active -->
+
       <img class ="images" src="image1.png">
-      <!-- This adds a caption to the slide -->
-      <div class="carousel-caption">
-      <h1> Nice mountain </h1>
-      <p> I like it here </p>
-      </div>
-      <!-- End of caption for slide -->
+
+      <div class="carousel-caption"> <!-- This adds a caption to the slide -->
+        <h1> Nice mountain </h1>
+        <p> I like it here </p>
+      </div> <!-- End of caption for slide -->
+      
     </div>
 
     <div class="item">
+
       <img class ="images" src="image2.png">
-      <!-- Adding slide caption -->
-      <div class="carousel-caption">
-      <h1> I'm hungry </h1>
-      <p> I'll make a sandwich </p>
-      </div>
-      <!-- Ending slide caption -->
+
+      <div class="carousel-caption"> <!-- Adding slide caption -->
+        <h1> I'm hungry </h1>
+        <p> I'll make a sandwich </p>
+      </div> <!-- Ending slide caption -->
+
     </div>
 
     <div class="item">
+
       <img class ="images" src="image3.png">
-      <!-- Adding caption to slide -->
-      <div class="carousel-caption">
-      <h1> No longer hungry </h1>
-      <p> I ate a sandwich </p>
-      </div>
-      <!-- End of caption to slide -->
-    </div>
-    <!-- End of images -->
-  </div>
+
+      <div class="carousel-caption"> <!-- Adding caption to slide -->
+        <h1> No longer hungry </h1>
+        <p> I ate a sandwich </p>
+      </div> <!-- End of caption to slide -->
+
+    </div> 
+
+  </div> <!-- End of images -->
 
   <!-- Left and right controls to change slide -->
-  <a class="left carousel-control" href="#carousel" data-slide="prev">
+  <a class="left carousel-control" href="#carousel" data-slide="prev">  <!--Left-->
   <!-- glyphicon is to show the arrow to the user -->
   <!-- glyphicon-chevron-x is for direction of arrow -->
     <span class="glyphicon glyphicon-chevron-left"></span>
     <span class="sr-only"> Previous </span>
   </a>
-  <a class="right carousel-control" href="#carousel" data-slide="next">
+
+  <a class="right carousel-control" href="#carousel" data-slide="next"> <!--Right-->
     <span class="glyphicon glyphicon-chevron-right"></span>
     <span class="sr-only"> Next </span>
-  </a>
-  <!-- End of controls to change slides -->
-</div>
-<!-- Carousel area Ends -->
+  </a> <!-- End of controls to change slides -->
+  
+</div> <!-- Carousel area Ends -->
 
-<hr> 
-    <!-- Grid cards area starts here -->
-    <div class = "row"> <!--Formatted the entry boxes to automatically scale for screen size and made several adjustments to margins, padding, box sizing, FIX text, FIX color - A.Panussis-->
-      <!-- Alex info card -->
-      <div class = "col">
-          <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title pt-1 pb-4 text-center">Alex Panussis</h5>
-              <div class="img-frame position-relative"> <!-- Avatar positions needs adjustment -->
-                <img class = "avatar position-relative top-50 start-50 translate-middle" style="width: 10rem; height: 10rem;" src="alex.png"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
-              </div>
-              <div class="card-text">
-                IT Major. Loves coffee, hates caffeine. Enjoys sleeping way too much, like most people his age do. Has a dream of making gameification teaching the golden standard of education methodology - Alex Panussis
-              </div>
-            </div>
-          </div>
-      </div>
 
-      <!-- Dara info card -->
-      <div class = "col">
-        <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title pt-1 pb-4 text-center">Dara McNally</h5>
-            <div class="img-frame position-relative">
-              <img class = "avatar position-relative top-50 start-50 translate-middle" style="width: 10rem; height: 10rem;" src="dara.png"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
-            </div>
-            <div class="card-text">
-              3rd year computer science major. Studying abroad in Athens, Greece. Enjoys programming, video games, and drawing. - Dara McNally
+<hr> <!--Seperation Line-->
+<hr> <!--Seperation Line-->
+
+<!-- TO-DO:
+    
+  -Use card-body to add color to the background and text through CSS.
+  -Center the Images.
+  -Add button that links back to the index.html page.
+
+-->
+    
+    <div class = "row"> <!-- Grid cards area starts here -->
+                        <!-- Formatted the entry boxes to automatically reposition for screen size and made several adjustments to image and text margins, padding, box sizing, FIX THIS and color - A.Panussis -->
+
+        <div class = "col"> <!-- Alex info card -->
+          <div class="card my-3 mx-auto position-relative" style="width: 18rem;">
+            <div class="card-body text-center">
+
+              <h4 class="card-title pt-1 pb-3 text-center">Page Layout Design and CSS </h4> 
+              <img class = "avatar mb-3" style="width: 10rem; height: 10rem;" src="alex.png"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
+              
+              <div class="card-text mb-1" style="text-align: left;"> <!-- Formatted cards to correctly and flexibly display text within boundaries of the card. - A. Panussis -->
+                <h5>                
+                  IT Major. Loves coffee, hates caffeine. Enjoys sleeping way too much, like most people his age do. Has a dream of making "game-ification" the golden standard of tutoring methodology in schools and universities worldwide.
+                </h5>
+              </div>
+
+              <div class="card-sign mb-1" style="text-align: right;"> <!-- Small clarity adjustments to signature. - A. Panussis -->
+                <h4>
+                  - Alex Panussis
+                </h4>
+              </div>
+
             </div>
           </div>
         </div>
-    </div>
+        
+        <div class = "col"> <!-- Dara info card -->
+          <div class="card my-3 mx-auto position-relative" style="width: 18rem; ">
+            <div class="card-body text-center">
 
-    <!-- Marko info card -->
-    <div class = "col">
-      <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title pt-1 pb-4 text-center">Markos Perikleous</h5>
-          <div class="img-frame position-relative">
-            <img class = "avatar position-relative top-50 start-50 translate-middle" style="width: 10rem; height: 10rem;" src="marko.jpg"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
+              <h4 class="card-title pt-1 pb-4 text-center">Phone List Array functionallity and index.html</h4>
+              <img class = "avatar mb-3" style="width: 10rem; height: 10rem;" src="dara.png"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
+              
+              <div class="card-text mb-1" style="text-align: left;"> <!-- Formatted cards to correctly and flexibly display text within boundaries of the card. - A. Panussis -->
+                <h5>
+                  3rd year computer science major. Studying abroad in Athens, Greece. Enjoys programming, video games, and drawing. 
+                </h5>
+              </div>
+
+              <div class="card-sign mb-1" style="text-align: right;"> <!-- Small clarity adjustments to signature. - A. Panussis -->
+                <h4>
+                  - Dara McNally
+                </h4>
+              </div>
+
+            </div>
           </div>
-          <div class="card-text">
-            4th year IT Major. Hates his major. Loves napping, video games, and has a shiny head. - Markos Perikleous
+        </div>
+
+      <div class = "col"> <!-- Marko info card -->
+        <div class="card my-3 mx-auto position-relative" style="width: 18rem; ">
+          <div class="card-body text-center">
+
+            <h4 class="card-title pt-1 pb-4 text-center">Carousel Functionality and about.html</h4>
+            <img class = "avatar mb-3" style="width: 10rem; height: 10rem;" src="marko.jpg"> <!-- CSS adjusted by A. Panussis and M. Perikleous -->
+            
+            <div class="card-text mb-1" style="text-align: left;"> <!-- Formatted cards to correctly and flexibly display text within boundaries of the card. - A. Panussis -->
+              <h5>
+                4th year IT Major. Hates his major. Loves napping, video games, and has a shiny head. 
+              </h5>
+            </div>
+
+            <div class="card-sign mb-1" style="text-align: right;"> <!-- Small clarity adjustments to signature. - A. Panussis -->
+              <h4>
+                - Markos Perikleous
+              </h4>
+            </div>
+
           </div>
         </div>
       </div>
-  </div>
+    
 
   </div>
 

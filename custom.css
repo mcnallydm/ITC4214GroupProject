@@ -15,6 +15,10 @@ h1 {
     color: white;
 }
 
+h5{
+    color: #063b44;
+}
+
 .row {
     max-width: 95%;
     margin: auto;
@@ -35,4 +39,10 @@ h1 {
 /* Indicator positioning M.Perikleous */
 .carousel-indicators {
     width: auto;
+}
+
+
+/*-- Azure cards make an interresting optical illution where the white background looks as if it where slightly pink. The difference is subtle.*/
+.card-body {
+    background-color: azure;
 }

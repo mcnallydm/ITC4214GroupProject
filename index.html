@@ -9,17 +9,28 @@
     <link rel="stylesheet" href="custom.css"> <!-- Custom .css file - D.McNally - A.Panussis-->
 
 </head>
+
+<!-- TO-DO:
+    
+  -Add Button with link/hyperlink to About page.
+  -Add logo icon on top left of screen next to the button.
+  
+-->
+
+
 <body>
-    <div class="sticky-top"> <!-- Changed color from bg-White to another through CSS - INCOMPLETE - CSS NEEDS FIXING - A.Panussis -->
+    <div class="sticky-top"> <!-- Changed color from bg-White to another through CSS - D.McNally - A.Panussis -->
 
-        <h1 class="display-5 text-center py-4 ">List Creator</h1> <!-- Formatted the title to look a little more elegant - A.Panussis-->
+        <h1 class="display-5 text-center py-4 ">Phone Catalog</h1> <!-- Formatted the title - A.Panussis-->
 
-        <div class = "row"> <!--Formatted the entry boxes to automatically scale for screen size and made several adjustments to margins, padding, box sizing, FIX text, FIX color - A.Panussis-->
+        
+
+        <div class = "row"> <!--Formatted the entry boxes to automatically scale for screen size and made several adjustments to margins, padding, box sizing. Made changes to labels and color - A.Panussis-->
 
             <div class = "col">
                 <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 7rem;">
                     <div class="card-body">
-                        <h5 class="card-title pt-1 pb-4 text-center">Detail 1 Card title</h5>
+                        <h5 class="card-title pt-1 pb-4 text-center">First Name</h5>
                         <input class="pb-1 position-absolute top-80 start-50 translate-middle" type="text" id="input1" placeholder="Type here...">
                     </div>
                 </div>
@@ -28,7 +39,7 @@
             <div class = "col">
                 <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 7rem;">
                     <div class="card-body">
-                        <h5 class="card-title pt-1 pb-4 text-center">Detail 2 Card title</h5>
+                        <h5 class="card-title pt-1 pb-4 text-center">Last Name</h5>
                         <input class="pb-1 position-absolute top-80 start-50 translate-middle" type="text" id="input2" placeholder="Type here...">
                     </div>
                 </div>
@@ -37,7 +48,7 @@
             <div class = "col">
                 <div class="card my-3 mx-auto position-relative" style="width: 18rem; height: 7rem;">
                     <div class="card-body">
-                        <h5 class="card-title pt-1 pb-4 text-center">Detail 3 Card title</h5>
+                        <h5 class="card-title pt-1 pb-4 text-center">Phone Number</h5>
                         <input class="pb-1 position-absolute top-80 start-50 translate-middle" type="text" id="input3" placeholder="Type here...">
                     </div>
                 </div>
@@ -46,19 +57,22 @@
         </div> <!--Formatted the entry boxes to automatically scale for screen size and made several adjustments to margins, padding, box sizing, FIX text, FIX color - A.Panussis-->
 
 
-        <div class="text-center">
+        <div class="text-center"><!-- Formatted the buttons to appear underneath the entry boxes, changed the color to something different than default. - A.Panussis-->
+            
             <p>
-                <button class="btn btn-warning my-2" onclick="submit();">Add to List</button>
-                <!-- ^ Formatted the button to appear underneath the entry boxes formatted the button color to appear a different color - INCOMPLETE - CSS NEES FIXING - A.Panussis-->
+                
+                <div class="btn-group my-2" role="group" aria-label="Basic example"> <!-- Made a button group for McNally's "Add to List" button and added an "About" button that links to Perikleous's about.html page. - A. Panussis -->
+                    <button class="btn btn-warning" onclick="submit();">Add to List</button> <!-- "Add to List" functionallity and button. - D. McNally -->
+                    <a href="about.html" class="btn btn-warning" onclick="">About</a> <!-- hyperlink to ABOUT.HTML-->
+                </div>
             </p>
-        </div>
 
-    </div>
+        </div>
     
     <table class="table table-striped table-responsive">
         <thead>
           <tr>
-            <th scope="col">Detail 1
+            <th scope="col">First Name
                 <select id="col1">
                     <option value="new-old">New-Old</option>
                     <option value="old-new">Old-New</option>
@@ -67,7 +81,7 @@
                 </select>
                 <button class="btn btn-secondary" onclick="sort(1);">Sort</button>
             </th>
-            <th scope="col">Detail 2
+            <th scope="col">Last Name
                 <select id="col2">
                     <option value="new-old">New-Old</option>
                     <option value="old-new">Old-New</option>
@@ -76,7 +90,7 @@
                 </select>
                 <button class="btn btn-secondary" onclick="sort(2);">Sort</button>
             </th>
-            <th scope="col">Detail 3
+            <th scope="col">Phone
                 <select id="col3">
                     <option value="new-old">New-Old</option>
                     <option value="old-new">Old-New</option>
